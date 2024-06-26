@@ -13,3 +13,6 @@ jobs:
 
       - name: Test C# code
         run: dotnet test
+
+      - name: npm install
+        run: npm install
