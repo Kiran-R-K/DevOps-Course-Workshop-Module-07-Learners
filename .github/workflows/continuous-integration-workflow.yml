@@ -8,12 +8,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build C# code
+      - name: Build C#
         run: dotnet build
 
-      - name: Test C# code
+      - name: Test C#
         run: dotnet test
 
-      - name: npm install
+      - name: install dependencies
         run: npm install
+        working-directory: ./DotnetTemplate.Web
+
+      - name: Build TypeScript
+        run: npm run build
         working-directory: ./DotnetTemplate.Web
